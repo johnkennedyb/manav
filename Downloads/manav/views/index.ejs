@@ -1,0 +1,53 @@
+<!-- views/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentication System</title>
+  <!-- Add Bootstrap CSS link here -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Bootstrap Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Authentication System</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/register">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Login</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="/dashboard">Dashboard</a>
+      </li> -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="/user">User</a>
+      </li> -->
+      <li class="nav-item">
+        <form action="/api/logout" method="post" class="nav-link">
+          <button type="submit" class="btn btn-link">Logout</button>
+        </form>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <%- body %> <!-- This is where the content of each page will be inserted -->
+</div>
+
+<!-- Add Bootstrap JS and Popper.js scripts here -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
